@@ -30,7 +30,7 @@ export const SelectTraderAccounts: FC = () => {
             // TRG Fetching
                 const owner = publicKey
                 const marketProductGroup = new PublicKey(mpgPubkey)
-                const trgs = await manifest.getTRGsofOwner(owner, marketProductGroup)
+                const trgs = await manifest.getTRGsOfOwner(owner, marketProductGroup)
                 setTrgsArr(trgs)
 
         } catch (error: any) {
@@ -44,7 +44,7 @@ export const SelectTraderAccounts: FC = () => {
 
             // TRG Creation
             const marketProductGroup = new PublicKey(mpgPubkey)
-                                                await manifest.createTRG(marketProductGroup)
+                                                await manifest.createTrg(marketProductGroup)
 
             fetchTraderAccounts();
         } catch (error: any) {

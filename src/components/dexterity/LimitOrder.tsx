@@ -52,7 +52,7 @@ export const PlaceLimitOrder: FC = () => {
                 null
             );
             // Get Products Array
-            const products = Array.from(dexterity.Manifest.GetProductsofMPG(trader.mpg));
+            const products = Array.from(dexterity.Manifest.GetProductsOfMPG(trader.mpg));
             // Get Update Products Mark Prices Instruction
             const updateMarkIx = trader.getUpdateMarkPricesIx(products);
 

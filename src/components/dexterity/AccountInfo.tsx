@@ -24,9 +24,9 @@ export const AccountInfo: FC = () => {
         if (!trader) return;
 
         // Fetch & Update Trader Account information
-        const cashBalance = trader.getCashBalanche().toDecimal()
+        const cashBalance = trader.getCashBalance().toDecimal()
         const portfolioValue = trader.getPortfolioValue().toDecimal()
-        const orderDate = Array.from(await Promise.all(trader.getOpenOrder([selectedProduct.name])))
+        const orderDate = Array.from(await Promise.all(trader.getOpenOrders([selectedProduct.name])))
 
         setCashBalance(cashBalance)
         setPortfolioValue(portfolioValue)

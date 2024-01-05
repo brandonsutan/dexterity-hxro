@@ -31,14 +31,12 @@ export const BasicsView: FC = ({ }) => {
               // Constructing our DexterityWallet from the Solana Wallet Adapter
                const wallet: DexterityWallet ={
                 publicKey: publicKey,
-                signTransaction: signTransaction,
-                signAllTransactions: signAllTransactions,
-                network: network,
-                rpc: rpc
+                signTransaction,
+                signAllTransactions,
                }
                
                 // Fetiching the Manifest
-                const manifest = await dexterity.getManifest(wallet)
+                const manifest = await dexterity.getManifest(rpc, true, wallet)
 
                 // Setting the Manifest with our Global Context
                 setManifest(manifest)
